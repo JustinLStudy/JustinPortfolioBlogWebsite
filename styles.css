@@ -1,0 +1,76 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'HeadingFont';
+    src: url('fonts/amerika-sans-font/AmerikaSans-Zq8.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SiteFont';
+    src: url('fonts/hind-font/HindRegular-9YyOL.ttf') format('truetype');
+}
+
+/* Body Styles */
+body {
+    font-family: 'SiteFont', sans-serif;
+    font-size: 16px;
+    color: #333; /* Default text color */
+    background-color: #f8f9fa; /* Page background color */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'HeadingFont', serif;
+    color: #007bff !important; /* Heading text color */
+}
+
+/* Paragraph Styles */
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555; /* Paragraph text color */
+}
+
+/* Navbar Styles */
+.navbar-custom {
+    background-color: #2c343b; /* Navbar background color */
+    padding: 1rem; /* Navbar padding */
+}
+
+.navbar-custom .navbar-brand img {
+    height: 30px; /* Navbar brand logo height */
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff; /* Navbar text color */
+    font-size: 16px;
+    margin-right: 15px; /* Adjust spacing between navbar links */
+}
+
+/* Customize the dropdown background color */
+.navbar-custom .navbar-nav .dropdown-menu {
+    background-color: #2c343b; /* Dropdown background color */
+}
+
+/* Customize the dropdown links */
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item {
+    color: #fff; /* Dropdown text color */
+}
+
+/* Customize the highlight color on dropdown hover */
+.navbar-custom .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Hover color */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Footer background color */
+    color: #fff; /* Footer text color */
+    padding: 20px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .navbar-custom .navbar-nav .nav-link {
+        margin-right: 0; /* Adjust spacing between navbar links for mobile devices */
+    }
+}
