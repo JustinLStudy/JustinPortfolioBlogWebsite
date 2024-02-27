@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Justin Lopez | Graphic Design | Egg Card</title>
+
+  <!-- Bootstrap CSS (Local) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap JS (Local) -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Stylesheet Link -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A birthday card themed after a sunny-side-up egg.">
+  <meta name="keywords" content="justin, lopez, portfolio, about me, graphic design, video, audio, egg, birthday, card">
+  <meta name="author" content="Justin Lopez">
+  <meta name="robots" content="index, follow"> <!-- Allow search engines to index and follow your pages -->
+
+  <!-- Open Graph Meta Tags (for social media sharing) -->
+  <meta property="og:title" content="Justin Lopez | Graphic Design | Egg Card">
+  <meta property="og:description" content="A birthday card themed after a sunny-side-up egg.">
+  <meta property="og:image" content="URL to your website's main image for social media sharing">
+  <meta property="og:url" content="URL of the current page">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Meta Tags (for Twitter Card) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Justin Lopez | Graphic Design | Egg Card">
+  <meta name="twitter:description" content="A birthday card themed after a sunny-side-up egg.">
+  <meta name="twitter:image" content="URL to your website's main image for Twitter sharing">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="URL of the canonical version of this page">
+
+  <!-- Favicon (replace "favicon.ico" with the path to your favicon) -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+  <!-- Bootstrap CSS (Local) -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome CDN for LinkedIn icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iUNn1L10/2nfwD5Gz9U5Ll9TMiunC5b5STBAb5PP5d1PzQVfhvMJ/pBWE" crossorigin="anonymous">
+
+  <!-- Additional Styles -->
+  <style>
+    /* Max width for the showcased image */
+    .img-fluid {
+      max-width: 40%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/justinlogo_white.png" alt="Justin Lopez" height="30" class="d-inline-block align-top">
+      </a>
+
+      <!-- Navbar toggle button for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar items on the right -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Video dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVideo" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Video
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownVideo">
+              <a class="dropdown-item" href="versacead.html">RGB Versace</a>
+              <a class="dropdown-item" href="aboutmevid.html">Things I Do In a Day</a>
+            </div>
+          </li>
+
+          <!-- Audio dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAudio" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Audio
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownAudio">
+              <a class="dropdown-item" href="artreviewpodcast.html">Cruddy Canvas 1</a>
+            </div>
+          </li>
+
+          <!-- Graphic Design dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDesign" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Graphic Design
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownDesign">
+              <a class="dropdown-item" href="eggcard.html">Egg Card</a>
+              <a class="dropdown-item" href="sunflowercard.html">Sunflower Card</a>
+            </div>
+          </li>
+
+          <!-- Contact link -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container mt-5 mb-5">
+    <!-- Graphic Design Showcase Image -->
+    <div class="mb-4 text-center">
+      <img src="images/Justin_Lopez_Elephant_Magazine.jpg" alt="A mock-up magazine based around wildlife." class="img-fluid" style="margin-top: 20px;">
+    </div>
+
+    <!-- Design Title -->
+    <h1 class="mb-3">Elephant Magazine</h1>
+
+    <!-- Design Description -->
+    <p class="lead mb-4">A mock-up magazine based around wildlife.</p>
+
+    <!-- Comment Section -->
+    <div class="card">
+      <div class="card-header">
+        Comments
+      </div>
+      <div class="card-body">
+        <!-- Add your comment form or display existing comments here -->
+        <!-- For simplicity, you can use a simple textarea for comments -->
+        <form>
+          <div class="mb-3">
+            <label for="comment" class="form-label">Your Comment</label>
+            <textarea class="form-control" id="comment" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Post Comment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                    <li>Email: justinlopez.business@gmail.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                    <li><a href="https://www.linkedin.com/in/justin-lopez-73a1a9280/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
