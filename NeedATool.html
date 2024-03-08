@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Justin Lopez | Things I Do In a Day</title>
+
+    <!-- Bootstrap CSS (Local) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS (Local) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Justin's daily routine, in video form.">
+    <meta name="keywords" content="justin, lopez, portfolio, about me, graphic design, video, audio, things, i, do, in, a, day">
+    <meta name="author" content="Justin Lopez">
+    <meta name="robots" content="index, follow"> <!-- Allow search engines to index and follow your pages -->
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Justin Lopez | Video | Things I Do In a Day">
+    <meta property="og:description" content="Justin's daily routine, in video form.">
+    <meta property="og:image" content="URL to your website's main image for social media sharing">
+    <meta property="og:url" content="URL of the current page">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags (for Twitter Card) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Justin Lopez | Video | Things I Do In a Day">
+    <meta name="twitter:description" content="Justin's daily routine, in video form.">
+    <meta name="twitter:image" content="URL to your website's main image for Twitter sharing">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="URL of the canonical version of this page">
+
+    <!-- Favicon (replace "favicon.ico" with the path to your favicon) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS (Local) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome CDN for LinkedIn icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-GLhlTQ8iUNn1L10/2nfwD5Gz9U5Ll9TMiunC5b5STBAb5PP5d1PzQVfhvMJ/pBWE" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Content -->
+    <div class="container mt-5 mb-5" style="margin-top: 100px !important;">
+        <!-- NeedATool Animation Container -->
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width: 100%; height: 100%;">
+                <canvas id="canvas" width="960" height="540" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:100%; height:100%; position: absolute; left: 0px; top: 0px; display: block;"></div>
+            </div>
+        </div>
+
+        <!-- Video Title -->
+        <h1 class="mb-3">Thoughts on Every Module</h1>
+
+        <!-- Video Description -->
+        <p class="lead mb-4">Justin reviews the modules he dealt with at Canadian Business College.</p>
+
+        <!-- Comment Section -->
+        <div class="card">
+            <div class="card-header">
+                Comments
+            </div>
+            <div class="card-body">
+                <!-- Add your comment form or display existing comments here -->
+                <!-- For simplicity, you can use a simple textarea for comments -->
+                <form>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label">Your Comment</label>
+                        <textarea class="form-control" id="comment" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li>Email: justinlopez.business@gmail.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li><a href="https://www.linkedin.com/in/justin-lopez-73a1a9280/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load Navbar -->
+    <script>
+        $(function () {
+            $("#navbar-placeholder").load("navbar.html");
+        });
+    </script>
+
+    <!-- NeedATool JavaScript -->
+    <script src="NeedATool/NeedATool.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script>
+        // Your NeedATool banner animation initialization script goes here
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp = AdobeAn.getComposition("1E840AC1B40C2E468E0807D52E5C5B32");
+            var lib = comp.getLibrary();
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", function (evt) { handleFileLoad(evt, comp) });
+            loader.addEventListener("complete", function (evt) { handleComplete(evt, comp) });
+            var lib = comp.getLibrary();
+            loader.loadManifest(lib.properties.manifest);
+        }
+
+        function handleFileLoad(evt, comp) {
+            var images = comp.getImages();
+            if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
+        }
+
+        function handleComplete(evt, comp) {
+            var lib = comp.getLibrary();
+            var ss = comp.getSpriteSheet();
+            var queue = evt.target;
+            var ssMetadata = lib.ssMetadata;
+            for (i = 0; i < ssMetadata.length; i++) {
+                ss[ssMetadata[i].name] = new createjs.SpriteSheet({ "images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames })
+            }
+            exportRoot = new lib.NeedATool();
+            stage = new lib.Stage(canvas);
+            stage.enableMouseOver();
+            fnStartAnimation = function () {
+                stage.addChild(exportRoot);
+                createjs.Ticker.framerate = lib.properties.fps;
+                createjs.Ticker.addEventListener("tick", stage);
+                stage.addEventListener("tick", stage._handleTick);
+            }
+            AdobeAn.makeResponsive(true, 'both', false, 1, [canvas, anim_container, dom_overlay_container]);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+
+        // Call the init function to start the animation
+        init();
+    </script>
+
+</body>
+
+</html>
