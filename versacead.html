@@ -44,66 +44,8 @@
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-    <div class="container">
-      <!-- Logo on the left -->
-      <a class="navbar-brand" href="index.html">
-        <img src="images/justinlogo_white.png" alt="Justin Lopez" height="30" class="d-inline-block align-top">
-      </a>
-
-      <!-- Navbar toggle button for mobile -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar items on the right -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <!-- Video dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVideo" role="button"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Video
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownVideo">
-              <a class="dropdown-item" href="versacead.html">RGB Versace</a>
-              <a class="dropdown-item" href="aboutmevid.html">Things I Do In a Day</a>
-            </div>
-          </li>
-
-          <!-- Audio dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAudio" role="button"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Audio
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownAudio">
-              <a class="dropdown-item" href="artreviewpodcast.html">Cruddy Canvas 1</a>
-            </div>
-          </li>
-
-          <!-- Graphic Design dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDesign" role="button"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Graphic Design
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownDesign">
-              <a class="dropdown-item" href="eggcard.html">Egg Card</a>
-              <a class="dropdown-item" href="sunflowercard.html">Sunflower Card</a>
-            </div>
-          </li>
-
-          <!-- Contact link -->
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
 
   <!-- Page Content -->
   <div class="container mt-5 mb-5" style="margin-top: 100px !important;">
@@ -158,6 +100,16 @@
         </div>
     </div>
   </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <!-- Load Navbar -->
+  <script>
+    $(function(){
+      $("#navbar-placeholder").load("navbar.html");
+    });
+  </script>
   
 </body>
 
