@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedATool Animation</title>
+    <!-- Include the CreateJS library -->
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <!-- Include the NeedATool.js file -->
+    <script src="NeedATool.js"></script>
+    <style>
+        /* Add CSS styles here if needed */
+        canvas {
+            display: block;
+            margin: 0 auto;
+            /* Add any additional styles for your canvas */
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a canvas element for the animation -->
+    <canvas id="canvas" width="728" height="90"></canvas>
+
+    <script>
+        // Define variables to hold the stage, exportRoot, and other necessary objects
+        var canvas, stage, exportRoot;
+
+        // Function to initialize the animation
+        function init() {
+            // Get the canvas element
+            canvas = document.getElementById("canvas");
+
+            // Create a stage object to manage the display list
+            stage = new createjs.Stage(canvas);
+
+            // Set up the VirtualCamera and Layer API
+            AdobeAn.VirtualCamera.getCamera();
+            AdobeAn.Layer.getLayerZDepth();
+
+            // Load the NeedATool composition
+            var loader = new createjs.LoadQueue(false);
+            loader.addEventListener("fileload", handleFileLoad);
+            loader.addEventListener("complete", handleComplete);
+            loader.loadFile({src: "NeedATool.js", type: "text/javascript"});
+
+            // Function to handle file load
+            function handleFileLoad(evt) {
+                if (evt && evt.item.type == "image") { 
+                    // Preload images if needed
+                    var img = new Image();
+                    img.src = evt.item.src;
+                }
+            }
+
+            // Function to handle complete loading of assets
+            function handleComplete() {
+                // Get the exportRoot from the loaded composition
+                exportRoot = new AdobeAn.compositions['1E840AC1B40C2E468E0807D52E5C5B32'].getLibrary()['NeedATool'];
+
+                // Add the exportRoot to the stage
+                stage.addChild(exportRoot);
+
+                // Optionally, enable mouse events if needed
+                stage.enableMouseOver();
+
+                // Update the stage to display changes
+                stage.update();
+            }
+
+            // Enable Ticker to update the stage
+            createjs.Ticker.setFPS(lib.properties.fps);
+            createjs.Ticker.addEventListener("tick", stage);
+        }
+
+        // Call the init function to initialize the animation
+        init();
+    </script>
+</body>
+</html>
